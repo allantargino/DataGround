@@ -6,4 +6,6 @@ install:
   - nuget install xunit.runner.visualstudio -Version 2.2.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release ./src/DataGround.sln
-  - mono ./testrunner/xunit.runners.2.2.0/tools/xunit.console.clr4.exe ./src/DataGround.Tests/bin/Release/DataGround.Tests.dll
+  - ls ./testrunner/xunit.runner.visualstudio.2.2.0/
+  - ls ./testrunner/xunit.runner.visualstudio.2.2.0/tools
+  - mono ./testrunner/xunit.runner.visualstudio.2.2.0/tools/xunit.console.clr4.exe ./src/DataGround.Tests/bin/Release/DataGround.Tests.dll
