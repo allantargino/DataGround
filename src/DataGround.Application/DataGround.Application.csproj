@@ -7,4 +7,5 @@
   <ItemGroup>
     <ProjectReference Include="..\DataGround.Core\DataGround.Core.csproj" />
   </ItemGroup>
+  <Target Name="Build" DependsOnTargets="$(BuildDependsOn)" Outputs="$(TargetPath)" />
 </Project>

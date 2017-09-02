@@ -1,14 +1,14 @@
 using DataGround.Core.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
+using Xunit;
 
 namespace DataGround.Tests
 {
-    [TestClass]
-    public class AccuracyTests
+    public class UnitTest1
     {
-        [TestMethod]
-        public void Accuracy()
+        [Fact]
+        public void Test1()
         {
             // obtem dados iniciais
             var points = new List<CartesianPoint>
