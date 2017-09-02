@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace DataGround.Core.Interfaces
 {
     public interface IPredictorAsync<M, I, O>
-        where M:class
+        where M:IModel
         where I:IInput
         where O:IOutput
     {
