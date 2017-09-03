@@ -1,10 +1,9 @@
 language: csharp
-solution: ./src/DataGround.sln
-dotnet: 2.0.0
 sudo: required
+solution: ./src/DataGround.sln
 matrix:
   include:
-    - dotnet: 1.0.4
+    - dotnet: 2.0.0
       mono: none
       dist: trusty
 
