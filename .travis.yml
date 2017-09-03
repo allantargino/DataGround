@@ -1,10 +1,12 @@
 language: csharp
 solution: ./src/DataGround.sln
 dotnet: 2.0.0
-install:
-  - nuget restore ./src/DataGround.sln
-  - nuget install xunit.runner.visualstudio -Version 2.2.0 -OutputDirectory testrunner
+sudo: required
+matrix:
+  include:
+    - dotnet: 1.0.4
+      mono: none
+      dist: trusty
+
 script:
-  - xbuild /p:Configuration=Release ./src/DataGround.sln
-  - echo $(ls ./testrunner/xunit.runner.visualstudio.2.2.0/)
-  - mono ./testrunner/xunit.runner.visualstudio.2.2.0/tools/xunit.console.clr4.exe ./src/DataGround.Tests/bin/Release/DataGround.Tests.dll
+  - ./ci.sh
