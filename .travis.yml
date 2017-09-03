@@ -1,7 +1,6 @@
 language: csharp
 sudo: required
 solution: ./src/DataGround.sln
-dotnet: 1.1.0
 matrix:
   include:
     - dotnet: 1.1.0
