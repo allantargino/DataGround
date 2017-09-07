@@ -7,11 +7,11 @@ namespace DataGround.Core.Models
 {
     public class SimpleOutput : IOutput
     {
-        public IList<float> Result { get; private set; }
+        public IEnumerable<float> Result { get; private set; }
 
-        public SimpleOutput()
+        public SimpleOutput(IEnumerable<float> result)
         {
-            Result = new List<float>();
+            Result = result;
         }
     }
 }

@@ -2,13 +2,14 @@ using DataGround.Core.Models;
 using System;
 using System.Collections.Generic;
 using Xunit;
+using System.Linq;
 
 namespace DataGround.Tests
 {
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void CheckLinearRegression()
         {
             // obtem dados iniciais
             var points = new List<CartesianPoint>
@@ -16,6 +17,7 @@ namespace DataGround.Tests
                 new CartesianPoint(0, 0),
                 new CartesianPoint(25, 25),
                 new CartesianPoint(50, 50),
+                new CartesianPoint(75, 75),
                 new CartesianPoint(100, 100)
             };
             var input = new CartesianInput(points);
@@ -32,6 +34,11 @@ namespace DataGround.Tests
 
             // calculando o output com os dados iniciais
             var output = predictor.ComputeAsync(input).Result;
+
+            // checando a regressão para um conjunto linear de pontos
+            var yIn = points.Select(p => p.Y);
+            var yOut = output.Result;
+            Assert.Equal(yIn, yOut);
         }
     }
 }

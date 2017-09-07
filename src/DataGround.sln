@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGround.Application", "DataGround.Application\DataGround.Application.csproj", "{E0F2620F-8042-4E45-A60D-B849CACA556B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGround.Core", "DataGround.Core\DataGround.Core.csproj", "{53A6807A-33EA-492D-A396-21957CBB8542}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGround.Tests", "DataGround.Tests\DataGround.Tests.csproj", "{9317383F-A815-4AA9-9C11-BB235004A93D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGround.API", "DataGround.API\DataGround.API.csproj", "{3EC0DF71-E05F-4756-9921-F41E44A3EB7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGround.Storage", "DataGround.Storage\DataGround.Storage.csproj", "{15868B84-B854-4BEA-99D5-B0BD61FC4D82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E0F2620F-8042-4E45-A60D-B849CACA556B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0F2620F-8042-4E45-A60D-B849CACA556B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0F2620F-8042-4E45-A60D-B849CACA556B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0F2620F-8042-4E45-A60D-B849CACA556B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{53A6807A-33EA-492D-A396-21957CBB8542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{53A6807A-33EA-492D-A396-21957CBB8542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53A6807A-33EA-492D-A396-21957CBB8542}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,9 +25,19 @@ Global
 		{9317383F-A815-4AA9-9C11-BB235004A93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9317383F-A815-4AA9-9C11-BB235004A93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9317383F-A815-4AA9-9C11-BB235004A93D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EC0DF71-E05F-4756-9921-F41E44A3EB7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC0DF71-E05F-4756-9921-F41E44A3EB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC0DF71-E05F-4756-9921-F41E44A3EB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC0DF71-E05F-4756-9921-F41E44A3EB7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15868B84-B854-4BEA-99D5-B0BD61FC4D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15868B84-B854-4BEA-99D5-B0BD61FC4D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15868B84-B854-4BEA-99D5-B0BD61FC4D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15868B84-B854-4BEA-99D5-B0BD61FC4D82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA602ECF-0419-4D61-8FC1-B98BEC0274E6}
+	EndGlobalSection
 EndGlobal

@@ -23,10 +23,11 @@ namespace DataGround.Core.Models
         {
             if (input == null) throw new ArgumentNullException(nameof(input));
 
-            var output = new SimpleOutput();
+            var output = new List<float>();
             foreach (var item in input.Points)
-                output.Result.Add(DoCalculation(item));
-            return output;
+                output.Add(DoCalculation(item));
+
+            return new SimpleOutput(output);
         }
 
         private float DoCalculation(CartesianPoint item)
